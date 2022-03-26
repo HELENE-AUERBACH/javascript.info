@@ -1,0 +1,15 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  function groupById(arr) {
+    return arr.reduce((usersById, currentUser) => {
+      usersById[currentUser.id] = currentUser;
+      return usersById;
+    }, {});
+  }
+
+</script>
+
+</html>
