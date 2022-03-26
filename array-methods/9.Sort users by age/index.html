@@ -1,0 +1,16 @@
+<!doctype html>
+<script>
+  function sortByAge(users) {
+    users.sort((user1, user2) => user1.age - user2.age);
+  }
+
+  let john = { name: "John", age: 25 };
+  let pete = { name: "Pete", age: 30 };
+  let mary = { name: "Mary", age: 28 };
+  let usersByAge = [ pete, john, mary ];
+  sortByAge(usersByAge); // now: [john, mary, pete]
+  alert(usersByAge[0].name); // John
+  alert(usersByAge[1].name); // Mary
+  alert(usersByAge[2].name); // Pete
+</script>
+</html>
