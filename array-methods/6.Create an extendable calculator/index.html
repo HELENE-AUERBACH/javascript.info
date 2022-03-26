@@ -1,0 +1,50 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  function Calculator() {
+    this.methods = {};
+
+    this.calculate = (str) => {
+      let result;
+      const arr = str.split(" ");
+      if (arr.length !== 3) {
+        alert(`${str} is not in the format “NUMBER operator NUMBER”`);
+      } else {
+        const operand1 = Number(arr[0]);
+        const operator = arr[1];
+        const operand2 = Number(arr[2]);
+        if (isNaN(operand1)) {
+          alert(`${operand1} is not a number`);
+        } else if (isNaN(operand2)) {
+          alert(`${operand2} is not a number`);
+        } else {
+          switch (operator) {
+            case '+':
+              result = operand1 + operand2;
+              break;
+            case '-':
+              result = operand1 - operand2;
+              break;
+            default:
+              if (this.methods[operator] === undefined) {
+                alert(`${operator} is not a known operator`);
+              } else {
+                result = this.methods[operator](operand1, operand2);
+              }
+              break;
+          }
+        }
+      }
+      return result;
+    }
+
+    this.addMethod = (name, func) => {
+      this.methods[name] = func;
+    }
+  }
+
+</script>
+
+</html>
