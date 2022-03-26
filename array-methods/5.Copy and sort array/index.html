@@ -1,0 +1,13 @@
+<!doctype html>
+<script>
+  function copySorted(arr) {
+    const copy = [...arr];
+    return copy.sort((a, b) => a.localeCompare(b));
+  }
+
+  let arr5 = ["HTML", "JavaScript", "CSS"];
+  let sorted = copySorted(arr5);
+  alert( sorted ); // CSS, HTML, JavaScript
+  alert( arr5 ); // HTML, JavaScript, CSS (no changes)
+</script>
+</html>
