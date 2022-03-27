@@ -1,0 +1,13 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+  const isEmpty = object => Object.keys(object).length === 0;
+
+  let schedule = {};
+  alert( isEmpty(schedule) ); // true
+  schedule["8:30"] = "get up";
+  alert( isEmpty(schedule) ); // false
+</script>
+
+</html>
