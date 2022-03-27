@@ -1,0 +1,16 @@
+<!doctype html>
+<script>
+  let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+  }
+  
+  let sum = 0;
+  for (let personWithSalary in salaries) {
+    sum += salaries[personWithSalary];
+  };
+
+  alert( sum ); // (100 + 160 + 130) = 390
+</script>
+</html>
